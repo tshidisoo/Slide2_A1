@@ -1,0 +1,192 @@
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    }
+    .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+    header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #4b6cb7;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+    margin-bottom: 10px;
+    }
+    .quote {
+    font-style: italic;
+    font-size: 0.9em;
+    }
+    /* Tabs */
+    .tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    }
+    .tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    }
+    .tab-btn:hover {
+    background-color: #f0f0f0;
+    }
+    .tab-btn.active {
+    border-bottom: 3px solid #4b6cb7;
+    color: #4b6cb7;
+    font-weight: bold;
+    }
+    .tab-content {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .tab-content.active {
+    display: block;
+    }
+    /* Accordion */
+    .accordion {
+    margin-top: 20px;
+    }
+    .accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    }
+    .accordion-header {
+    padding: 15px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: relative;
+    }
+    .accordion-header:hover {
+    background-color: #f0f0f0;
+    }
+    .accordion-header::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    }
+    .accordion-item.active .accordion-header::after {
+    content: '-';
+    }
+    .accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .accordion-item.active .accordion-content {
+    padding: 15px;
+    max-height: 500px;
+    }
+    /* Quiz */
+    .quiz-container {
+    margin-top: 20px;
+    }
+    .question {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border-left: 4px solid #4b6cb7;
+    }
+    .options {
+    margin-top: 10px;
+    }
+    .option {
+    display: block;
+    margin-bottom: 5px;
+    }
+    .submit-btn, .retry-btn {
+    padding: 10px 20px;
+    background-color: #4b6cb7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    }
+    .submit-btn:hover, .retry-btn:hover {
+    background-color: #3a5ca0;
+    }
+    .results {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    }
+    .feedback-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    }
+    .correct {
+    background-color: #d4edda;
+    border-left: 4px solid #28a745;
+    }
+    .incorrect {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+    }
+    footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    color: #666;
+    font-size: 0.9em;
+    }
+    .fill-blank-input {
+    border: none;
+    border-bottom: 2px solid #4b6cb7;
+    padding: 5px;
+    margin: 0 5px;
+    width: 120px;
+    font-size: 16px;
+    outline: none;
+    }
+    .fill-blank-input:focus {
+    border-bottom-color: #3a5ca0;
+    }
+    @media screen and (max-width: 768px) {
+    .container {
+    padding: 10px;
+    }
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+    }
+    }
